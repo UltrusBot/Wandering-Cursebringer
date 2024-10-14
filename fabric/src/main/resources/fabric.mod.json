@@ -21,6 +21,9 @@
     "entrypoints": {
         "main": [
             "me.ultrusmods.wanderingcursebringer.WanderingCursebringerFabric"
+        ],
+        "client": [
+            "me.ultrusmods.wanderingcursebringer.client.WanderingCursebringerClientFabric"
         ]
     },
     "mixins": [

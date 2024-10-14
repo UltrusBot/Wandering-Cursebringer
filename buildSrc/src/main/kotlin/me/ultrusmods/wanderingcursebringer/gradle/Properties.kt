@@ -6,7 +6,7 @@ object Properties {
     const val JAVA = 21
 
     const val GROUP = "me.ultrusmods"
-    const val MOD_NAME = "Example Mod"
+    const val MOD_NAME = "WanderingCursebringer"
     const val MOD_ID = "wanderingcursebringer"
     const val MOD_AUTHOR = "UltrusBot"
     const val MOD_CONTRIBUTORS = ""

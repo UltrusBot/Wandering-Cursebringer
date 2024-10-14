@@ -4,9 +4,7 @@
   "package": "me.ultrusmods.wanderingcursebringer.mixin.client",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
-  "client": [
-    "MixinTitleScreen"
-  ],
+  "client": [],
   "server": [],
   "injectors": {
     "defaultRequire": 1

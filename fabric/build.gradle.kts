@@ -17,8 +17,11 @@ repositories {
 }
 dependencies {
     minecraft(libs.minecraft);
-    mappings(loom.officialMojangMappings())
-
+//    mappings(loom.officialMojangMappings())
+    mappings(loom.layered {
+        officialMojangMappings()
+        parchment("org.parchmentmc.data:parchment-1.21:${Properties.PARCHMENT_VERSION}@zip")
+    })
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
     modLocalRuntime(libs.modmenu)
