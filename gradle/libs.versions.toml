@@ -4,6 +4,7 @@ fabric_loader = "0.16.5"
 fabric_api = "0.105.0+1.21.1"
 neoforge = "21.1.66"
 modmenu = "11.0.1"
+fabricasm = "v2.3"
 
 # Mixin
 fabric_mixin = "0.15.3+mixin.0.8.7"
@@ -27,6 +28,7 @@ modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
 # Mixin
 fabric_mixin = { module = "net.fabricmc:sponge-mixin", version.ref = "fabric_mixin" }
 mixin_extras = { module = "io.github.llamalad7:mixinextras-common", version.ref = "mixin_extras" }
+fabricasm = { module = "com.github.Chocohead:Fabric-ASM", version.ref = "fabricasm" }
 
 [plugins]
 fabric_loom = { id = "fabric-loom", version.ref = "fabric_loom" }

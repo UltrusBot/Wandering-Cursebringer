@@ -1,7 +1,7 @@
 package me.ultrusmods.wanderingcursebringer.gradle
 
 object Properties {
-    const val MOD = "1.0.0"
+    const val MOD = "0.1.0"
 
     const val JAVA = 21
 
@@ -13,10 +13,9 @@ object Properties {
     const val DESCRIPTION = "Adds the Wandering Cursebringer, an illager that sells curses."
     const val LICENSE = "MIT"
 
-    const val HOMEPAGE = "https://modrinth.com/project/modrinth-project"
-    const val CURSEFORGE_PROJECT_ID = "000000"
-    const val CURSEFORGE_PAGE = "https://www.curseforge.com/minecraft/mc-mods/curseforge-project"
-    const val MODRINTH_PROJECT_ID = "????????"
+    const val HOMEPAGE = "https://ultrusmods.me/mod/wandering-cursebringer"
+    const val CURSEFORGE_PROJECT_ID = "1129770"
+    const val MODRINTH_PROJECT_ID = "E8pE023U"
     const val GITHUB_REPO = "UltrusBot/Wandering-Cursebringer"
     const val GITHUB_COMMITISH = "1.21"
 

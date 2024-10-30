@@ -63,12 +63,13 @@ publishMods {
     file.set(tasks.named<Jar>("jar").get().archiveFile)
     modLoaders.add("neoforge")
     changelog = rootProject.file("CHANGELOG.md").readText()
+    displayName = "Wandering Cursebringer NeoForge ${Properties.MOD}+${libs.minecraft.get().version}"
     version = "${Properties.MOD}+${libs.minecraft.get().version}-neoforge"
     type = STABLE
 
     curseforge {
         projectId = Properties.CURSEFORGE_PROJECT_ID
-        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+        accessToken = providers.environmentVariable("CF_API_KEY")
 
         minecraftVersions.add(libs.minecraft.get().version!!)
         javaVersions.add(JavaVersion.VERSION_21)
@@ -85,7 +86,7 @@ publishMods {
     }
 
     github {
-        accessToken = providers.environmentVariable("GITHUB_TOKEN")
-        parent(project(":common").tasks.named("publishGithub"))
+        accessToken = providers.gradleProperty("GH_TOKEN")
+        parent(project(":").tasks.named("publishGithub"))
     }
 }

@@ -14,6 +14,11 @@ repositories {
         name = "TerraformersMC"
         url = uri("https://maven.terraformersmc.com/")
     }
+    maven {
+        name = "Jitpack"
+        url = uri("https://jitpack.io")
+    }
+
 }
 dependencies {
     minecraft(libs.minecraft);
@@ -25,6 +30,8 @@ dependencies {
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
     modLocalRuntime(libs.modmenu)
+    modImplementation(libs.fabricasm)
+    include(libs.fabricasm)
 }
 
 loom {
@@ -46,14 +53,12 @@ loom {
             configName = "Fabric Client"
             setSource(sourceSets["test"])
             ideConfigGenerated(true)
-            vmArgs("-Dmixin.debug.verbose=true", "-Dmixin.debug.export=true")
         }
         named("server") {
             server()
             configName = "Fabric Server"
             setSource(sourceSets["test"])
             ideConfigGenerated(true)
-            vmArgs("-Dmixin.debug.verbose=true", "-Dmixin.debug.export=true")
         }
         register("datagen") {
             server()
@@ -78,12 +83,13 @@ publishMods {
     file.set(tasks.named<Jar>("remapJar").get().archiveFile)
     modLoaders.add("fabric")
     changelog = rootProject.file("CHANGELOG.md").readText()
+    displayName = "Wandering Cursebringer Fabric ${Properties.MOD}+${libs.minecraft.get().version}"
     version = "${Properties.MOD}+${libs.minecraft.get().version}-fabric"
     type = STABLE
 
     curseforge {
         projectId = Properties.CURSEFORGE_PROJECT_ID
-        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+        accessToken = providers.environmentVariable("CF_API_KEY")
 
         minecraftVersions.add(libs.minecraft.get().version!!)
         javaVersions.add(JavaVersion.VERSION_21)
@@ -100,7 +106,7 @@ publishMods {
     }
 
     github {
-        accessToken = providers.environmentVariable("GITHUB_TOKEN")
-        parent(project(":common").tasks.named("publishGithub"))
+        accessToken = providers.gradleProperty("GH_TOKEN")
+        parent(project(":").tasks.named("publishGithub"))
     }
 }

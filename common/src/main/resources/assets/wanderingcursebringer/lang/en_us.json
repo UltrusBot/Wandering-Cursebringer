@@ -1,3 +1,23 @@
 {
-  "entity.wanderingcursebringer.wandering_cursebringer": "Wandering Cursebringer"
+  "entity.wanderingcursebringer.wandering_cursebringer": "Wandering Cursebringer",
+  "item.wanderingcursebringer.wandering_cursebringer_spawn_egg": "Wandering Cursebringer Spawn Egg",
+  "curse_tier.wanderingcursebringer.lesser": "Lesser Curse",
+  "curse_tier.wanderingcursebringer.normal": "Normal Curse",
+  "curse_tier.wanderingcursebringer.greater": "Greater Curse",
+  "itemGroup.wanderingcursebringer.items": "Wandering Cursebringer Items",
+  "curse.wanderingcursebringer.gluttony": "Curse of Gluttony",
+  "curse.wanderingcursebringer.gluttony.desc": "Your hunger grows insatiable faster",
+  "item.wanderingcursebringer.gluttony_scroll": "Scroll of Gluttony",
+  "curse.wanderingcursebringer.glass_heart": "Curse of Glass Heart",
+  "curse.wanderingcursebringer.glass_heart.desc": "You gain 5 extra hearts, but your ability to naturally regenerate is removed",
+  "item.wanderingcursebringer.glass_heart_scroll": "Scroll of the Glass Heart",
+  "sleep_reason.wanderingcursebringer.insomnia_curse": "The Curse of Insomnia prevents you from sleeping",
+  "curse.wanderingcursebringer.insomnia": "Curse of Insomnia",
+  "curse.wanderingcursebringer.insomnia.desc": "You are unable to sleep, but are buffed at night, gaining strength and speed",
+  "item.wanderingcursebringer.insomnia_scroll": "Scroll of Insomnia",
+  "curse.wanderingcursebringer.darkness": "Curse of Nyctophobia",
+  "curse.wanderingcursebringer.darkness.desc": "Staying in the dark too long will consume you, damaging you over time",
+  "item.wanderingcursebringer.darkness_scroll": "Scroll of Nyctophobia",
+  "death.attack.wanderingcursebringer.darkness": "%1$s was consumed by the darkness",
+  "death.attack.wanderingcursebringer.darkness.player": "%1$s was consumed by the darkness while fighting %2$s"
 }

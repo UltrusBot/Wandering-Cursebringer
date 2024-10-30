@@ -55,18 +55,3 @@ artifacts {
     add("commonResources", sourceSets["generated"].resources.sourceDirectories.singleFile)
     add("commonTestResources", sourceSets["test"].resources.sourceDirectories.singleFile)
 }
-
-publishMods {
-    changelog = rootProject.file("CHANGELOG.md").readText()
-    version = "${Properties.MOD}+${libs.minecraft.get().version}"
-    type = STABLE
-
-    github {
-        accessToken = providers.environmentVariable("GITHUB_TOKEN")
-        repository = Properties.GITHUB_REPO
-        tagName = "${Properties.MOD}+${libs.minecraft.get().version}"
-        commitish = Properties.GITHUB_COMMITISH
-
-        allowEmptyFiles = true
-    }
-}

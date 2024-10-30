@@ -24,6 +24,12 @@
         ],
         "client": [
             "me.ultrusmods.wanderingcursebringer.client.WanderingCursebringerClientFabric"
+        ],
+        "fabric-datagen": [
+            "me.ultrusmods.wanderingcursebringer.data.WanderingCursebringerDatagen"
+        ],
+        "mm:early_risers": [
+            "me.ultrusmods.wanderingcursebringer.WanderingCursebringerEarlyRiser"
         ]
     },
     "mixins": [
@@ -34,6 +40,7 @@
         "fabricloader": "${fabric_loader_range}",
         "fabric-api": "*",
         "minecraft": "${fabric_minecraft_version_range}",
-        "java": ">=${java_version}"
+        "java": ">=${java_version}",
+        "mm": "*"
     }
 }

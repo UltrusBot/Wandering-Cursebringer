@@ -1,0 +1,8 @@
+{
+  "curse_applied": {
+    "subtitle": "sound.wanderingcursebringer.curse_applied",
+    "sounds": [
+      "wanderingcursebringer:curse_applied"
+    ]
+  }
+}

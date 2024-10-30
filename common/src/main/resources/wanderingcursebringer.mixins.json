@@ -4,8 +4,14 @@
   "package": "me.ultrusmods.wanderingcursebringer.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
-  "client": [],
+  "mixins": [
+    "FoodDataMixin",
+    "ItemMixin",
+    "PlayerMixin"
+  ],
+  "client": [
+    "client.GuiMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1

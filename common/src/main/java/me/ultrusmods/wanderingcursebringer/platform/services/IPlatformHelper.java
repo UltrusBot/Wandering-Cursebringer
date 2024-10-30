@@ -1,5 +1,11 @@
 package me.ultrusmods.wanderingcursebringer.platform.services;
 
+import me.ultrusmods.wanderingcursebringer.curse.Curse;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.CreativeModeTab;
+
+import java.util.Map;
+
 public interface IPlatformHelper {
 
     /**
@@ -33,4 +39,12 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    Map<Curse, Integer> getPlayerCurses(Player player);
+    void sendCurseSyncPacket(Player player);
+
+    int getDarknessTimer(Player player);
+    void setDarknessTimer(Player player, int timer);
+
+    CreativeModeTab.Builder getCreativeTab();
 }
