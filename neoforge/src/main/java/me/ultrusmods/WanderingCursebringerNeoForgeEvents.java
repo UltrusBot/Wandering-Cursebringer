@@ -2,6 +2,7 @@ package me.ultrusmods;
 
 import me.ultrusmods.wanderingcursebringer.command.CurseCommand;
 import me.ultrusmods.wanderingcursebringer.curse.CurseManager;
+import me.ultrusmods.wanderingcursebringer.entity.WanderingCursebringerSpawner;
 import me.ultrusmods.wanderingcursebringer.platform.Services;
 import me.ultrusmods.wanderingcursebringer.register.CurseRegistry;
 import net.minecraft.network.chat.Component;
@@ -11,6 +12,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.player.CanPlayerSleepEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.level.ModifyCustomSpawnersEvent;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.GAME)
 public class WanderingCursebringerNeoForgeEvents {
@@ -38,5 +40,10 @@ public class WanderingCursebringerNeoForgeEvents {
                 event.getDispatcher(),
                 event.getBuildContext()
         );
+    }
+
+    @SubscribeEvent
+    public static void onModifyCustomSpawnersEvent(ModifyCustomSpawnersEvent event) {
+        event.addCustomSpawner(new WanderingCursebringerSpawner(event.getLevel().getServer()));
     }
 }

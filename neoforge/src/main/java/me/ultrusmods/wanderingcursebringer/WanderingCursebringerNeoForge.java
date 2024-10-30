@@ -27,7 +27,6 @@ public class WanderingCursebringerNeoForge {
         eventBus.addListener(this::onEntityAttributeCreationEvent);
         eventBus.addListener(this::registerCreateEvent);
         eventBus.addListener(WanderingCursebringerNeoForge::registerPacketPayloads);
-        eventBus.addListener(this::onModifyCustomSpawnersEvent);
     }
 
     private void onRegisterEvent(RegisterEvent event) {
@@ -65,9 +64,5 @@ public class WanderingCursebringerNeoForge {
 
     private void onEntityAttributeCreationEvent(EntityAttributeCreationEvent event) {
          event.put(EntityTypeRegistry.WANDERING_CURSEBRINGER, WanderingCursebringer.createMobAttributes().build());
-    }
-
-    private void onModifyCustomSpawnersEvent(ModifyCustomSpawnersEvent event) {
-        event.addCustomSpawner(new WanderingCursebringerSpawner(event.getLevel().getServer()));
     }
 }
