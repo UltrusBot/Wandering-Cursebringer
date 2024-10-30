@@ -69,7 +69,7 @@ publishMods {
 
     curseforge {
         projectId = Properties.CURSEFORGE_PROJECT_ID
-        accessToken = providers.environmentVariable("CF_API_KEY")
+        accessToken = providers.gradleProperty("CF_API_KEY")
 
         minecraftVersions.add(libs.minecraft.get().version!!)
         javaVersions.add(JavaVersion.VERSION_21)
@@ -80,7 +80,7 @@ publishMods {
 
     modrinth {
         projectId = Properties.MODRINTH_PROJECT_ID
-        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+        accessToken = providers.gradleProperty("MODRINTH_TOKEN")
 
         minecraftVersions.add(libs.minecraft.get().version!!)
     }
